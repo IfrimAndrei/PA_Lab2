@@ -2,8 +2,9 @@ public class main {
     public static void main(String[] args) {
         Problem problema=new Problem();
         initProblem(problema);
-        System.out.println(problema.toString());
+        problema.afisare();
     }
+
     public static void initProblem(Problem problema)
     {
         int[][] tabelCosturi = {
@@ -11,7 +12,7 @@ public class main {
                 {5, 4, 8},
                 {5, 6, 8}
         };
-        problema.create(tabelCosturi);
+        problema.create(tabelCosturi,3,3);
 
         problema.addDestination("D1",20);
         //problema.addDestination("D1",20);

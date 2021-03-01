@@ -10,6 +10,7 @@ public class Problem {
 
     public void addDestination(String name,int supply)
     {
+
         d[dSize]=new Destination(name,supply);
         for(int i=0;i<dSize;i++)
             if(d[dSize].equals(d[i])) {
@@ -40,8 +41,9 @@ public class Problem {
 
         sSize++;
     }
-    public void create (int[][] costTabel){
-
+    public void create (int[][] costTabel,int sSize,int dSize){
+        s=new Source[sSize];
+        d=new Destination[dSize];
        this.costTabel=costTabel;
 
     }
@@ -52,9 +54,21 @@ public class Problem {
                 "\nd=" + Arrays.toString(d) +
                 ",\ns=" + Arrays.toString(s) +
                 ",\ndSize=" + dSize +
-                ",\nsSize=" + sSize +
+                ", sSize=" + sSize +
                 /*",\ncostTabel=" + Arrays.toString(costTabel) +*/
                 "\n}";
+    }
+    public void afisare()
+    {
+        System.out.println(this.toString());
+        System.out.println("costTabel=");
+        for(int i=0;i< costTabel.length;i++) {
+            for (int j = 0; j < costTabel.length; j++)
+                System.out.print(costTabel[i][j] + " ");
+            System.out.println();
+        }
+
+
     }
 
 
