@@ -43,7 +43,7 @@ public class Problem {
 
 
     /**
-     * add a new Destination to the problem, putting it in the 'd' array,using dSize as a counter for the array
+     * Adds a new Destination to the problem, putting it in the 'd' array,using dSize as a counter for the array. Verifies that the Destination is unique
      * @param name
      * @param supply
      */
@@ -60,7 +60,7 @@ public class Problem {
     }
 
     /**
-     *  add a new Source to the problem, putting it in the 's' array,using sSize as a counter for the array
+     *  Adds a new Source to the problem, putting it in the 's' array,using sSize as a counter for the array. Verifies that the Source is unique
      * @param name
      * @param supply
      * @param type

@@ -5,6 +5,7 @@ public class main {
         initProblem ( prob );
         prob.print ();
 
+        //Resolving the problem
         Solution sol = new Solution ();
         sol.resolve ( prob );
     }
@@ -21,6 +22,7 @@ public class main {
                 { 5, 4, 8 },
                 { 5, 6, 8 }
         };
+
         prob.create ( costTable, nrSource, nrDest );
 
         prob.addDestination ( "D1", 20 );

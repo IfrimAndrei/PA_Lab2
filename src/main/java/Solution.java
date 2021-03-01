@@ -1,11 +1,8 @@
 public class Solution {
     public void resolve(Problem prob) {
-
         verify( prob ); //Verificam daca exista o solutie posibila
-
         BasicSolution( prob ); //Resolve the demands supply one by one,taking from Sources supply one by one in order
-        //This method doesn't care about the final cost
-
+                               //This method doesn't care about the final cost
 
     }
 
@@ -49,7 +46,7 @@ public class Solution {
     }
 
     /**
-     * Verify that Sources has enough supply for Destinations
+     * Verify that Sources has enough supply for Destinations. If its not true, it returns error 2
      * @param prob
      */
     public void verify(Problem prob) {

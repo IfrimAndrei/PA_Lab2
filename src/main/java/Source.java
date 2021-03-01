@@ -28,11 +28,9 @@ public abstract class Source {
         this.supply = supply;
     }
 
-
     public boolean equals ( Source obj ) {
         return this.name.equals (obj.name) && this.supply == obj.supply;
     }
-
 
     @Override
     public String toString () {
