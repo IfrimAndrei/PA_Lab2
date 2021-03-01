@@ -24,9 +24,9 @@ public class Destination {
         this.supply = supply;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+
+    public boolean equals(Destination dest) {
+        return this.name.equals(dest.name) && this.supply == dest.supply;
     }
 
     @Override

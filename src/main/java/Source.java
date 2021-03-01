@@ -1,14 +1,9 @@
-import java.util.Objects;
-
 public abstract class Source{
 
     private String name;
     private int supply;
 
     //---------------------Constructor
-
-
-    public Source() { }
 
     public Source(String name, int supply)
     {
@@ -32,9 +27,9 @@ public abstract class Source{
         this.supply = supply;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+
+    public boolean equals(Source obj) {
+        return this.name.equals(obj.name) && this.supply == obj.supply;
     }
 
 
