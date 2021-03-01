@@ -1,8 +1,9 @@
 public class main {
     public static void main ( String[] args ) {
+        //Creating and initializing the problem
         Problem prob = new Problem ();
         initProblem ( prob );
-        prob.afisare ();
+        prob.print ();
 
         Solution sol = new Solution ();
         sol.resolve ( prob );

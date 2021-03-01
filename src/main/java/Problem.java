@@ -113,7 +113,7 @@ public class Problem {
     /**
      * Using toString method to print the problem data
      */
-    public void afisare ( ) {
+    public void print ( ) {
         System.out.println (this.toString ());
         System.out.println ("costTabel=");
         for (int i = 0 ; i < sSize ; i++) {
