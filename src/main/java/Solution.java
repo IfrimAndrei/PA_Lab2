@@ -12,6 +12,7 @@ public class Solution {
      * @param prob
      */
     private void BasicSolution(Problem prob) {
+        System.out.println("Solution: ");
         int contorSupply = 0;
         int costTotal = 0;
         for ( int i = 0 ; i < prob.getdSize() ; i++ )

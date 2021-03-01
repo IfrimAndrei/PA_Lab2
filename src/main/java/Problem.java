@@ -98,29 +98,24 @@ public class Problem {
 
     }
 
-    @Override
-    public String toString ( ) {
-        return "Problem{" +
+    /**
+     * Using toString method to print the problem data
+     */
+    public void print ( ) {
+        System.out.println ("Problem{" +
                 "\nd=" + Arrays.toString (d) +
                 ",\ns=" + Arrays.toString (s) +
                 ",\ndSize=" + dSize +
                 ", sSize=" + sSize +
                 /*",\ncostTabel=" + Arrays.toString(costTabel) +*/
-                "\n}";
-    }
-
-
-    /**
-     * Using toString method to print the problem data
-     */
-    public void print ( ) {
-        System.out.println (this.toString ());
+                "");
         System.out.println ("costTabel=");
         for (int i = 0 ; i < sSize ; i++) {
             for (int j = 0 ; j < dSize ; j++)
-                System.out.print (costTabel[i][j] + " ");
-            System.out.println ();
+                System.out.print (" " +costTabel[i][j] );
+            System.out.println ("");
         }
+        System.out.println("}");
 
     }
 
