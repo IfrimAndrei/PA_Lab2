@@ -3,8 +3,8 @@ import java.util.Arrays;
 public class Problem {
     Destination[] d=new Destination[5];
     Source[] s=new Source [5];
-    int dSize=0;
-    int sSize=0;
+    int dSize=0;  // Numarul de elemente de tip Source
+    int sSize=0;  // Numarul de elemente de tip Destination
     int[][] costTabel;
 
 
@@ -41,6 +41,7 @@ public class Problem {
 
         sSize++;
     }
+
     public void create (int[][] costTabel,int sSize,int dSize){
         s=new Source[sSize];
         d=new Destination[dSize];
@@ -58,16 +59,16 @@ public class Problem {
                 /*",\ncostTabel=" + Arrays.toString(costTabel) +*/
                 "\n}";
     }
+
     public void afisare()
     {
         System.out.println(this.toString());
         System.out.println("costTabel=");
-        for(int i=0;i< costTabel.length;i++) {
-            for (int j = 0; j < costTabel.length; j++)
+        for(int i=0; i < sSize; i++) {
+            for (int j = 0; j < dSize; j++)
                 System.out.print(costTabel[i][j] + " ");
             System.out.println();
         }
-
 
     }
 

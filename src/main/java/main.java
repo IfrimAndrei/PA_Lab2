@@ -1,26 +1,31 @@
 public class main {
     public static void main(String[] args) {
-        Problem problema=new Problem();
-        initProblem(problema);
-        problema.afisare();
+        Problem prob=new Problem();
+        initProblem(prob);
+        prob.afisare();
+
+        Solution sol=new Solution();
+        sol.resolve(prob);
     }
 
-    public static void initProblem(Problem problema)
+    public static void initProblem(Problem prob)
     {
+        int nrDest=3;
+        int nrSource=3;
         int[][] tabelCosturi = {
                 {2, 3, 1},
                 {5, 4, 8},
                 {5, 6, 8}
         };
-        problema.create(tabelCosturi,3,3);
+        prob.create(tabelCosturi,nrSource,nrDest);
 
-        problema.addDestination("D1",20);
-        //problema.addDestination("D1",20);
-        problema.addDestination("D2",25);
-        problema.addDestination("D3",25);
-        problema.addSource("S1",10,"Factory");
-        //problema.addSource("S1",10,"Warehouse");
-        problema.addSource("S2",35,"Warehouse");
-        problema.addSource("S3",25,"Warehouse");
+        prob.addDestination("D1",20);
+        //prob.addDestination("D1",20);
+        prob.addDestination("D2",25);
+        prob.addDestination("D3",25);
+        prob.addSource("S1",10,"Factory");
+        //prob.addSource("S1",10,"Warehouse");
+        prob.addSource("S2",35,"Warehouse");
+        prob.addSource("S3",25,"Warehouse");
     }
 }
