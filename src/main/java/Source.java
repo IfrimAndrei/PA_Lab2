@@ -1,21 +1,22 @@
-public class Source {
+import java.util.Objects;
 
-    private SourceType type;
+public abstract class Source{
+
     private String name;
     private int supply;
 
     //---------------------Constructor
-    public Source(String name, int supply, SourceType type)
+
+
+    public Source() { }
+
+    public Source(String name, int supply)
     {
         this.name=name;
         this.supply=supply;
-        this.type=type;
     }
 
     //---------------------Getters
-    public SourceType getType() {
-        return type;
-    }
     public String getName() {
         return name;
     }
@@ -24,9 +25,6 @@ public class Source {
     }
 
     //---------------------Setters
-    public void setType(SourceType type) {
-        this.type = type;
-    }
     public void setName(String name) {
         this.name = name;
     }
@@ -35,10 +33,15 @@ public class Source {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+
+    @Override
     public String toString() {
         return "Source{" +
-                "type=" + type +
-                ", name=" + name +
+                "name=" + name +
                 ", supply=" + supply +
                 '}'
                 ;

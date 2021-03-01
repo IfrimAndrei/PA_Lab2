@@ -1,17 +1,33 @@
 public class Problem {
-    /*public  Problem(int sizeS,int sizeD,int[][] tabelCosturi)
+    Destination[] d=new Destination[100];
+    Source[] s=new Source [100];
+    int dSize=0;
+    int sSize=0;
+
+    public void addDestination(String name,int supply)
     {
-
+        d[dSize]=new Destination(name,supply);
+        dSize++;
     }
-    public void add*/
+    public void addSource(String name,int supply,String type)
+    {
+        if(type.equals("Warehouse"))
+            s[sSize]=new Warehouse(name,supply);
 
+        else if(type.equals("Factory"))
+            s[sSize]=new Factory(name,supply);
 
-    public static void main ( String args[]){
+        else
+            System.err.println("Inserted type doesn't exist");
+
+        sSize++;
+    }
+    public static void main ( String[] args){
         Source[] s=new Source[3];
         Destination[] d=new Destination[3];
-        s[0]=new Source("S1",10,SourceType.WAREHOUSE);
-        s[1]=new Source("S2",35,SourceType.WAREHOUSE);
-        s[2]=new Source("S3",25,SourceType.FACTORY);
+        //s[0]=new Source("S1",10,SourceType.WAREHOUSE);
+        //s[1]=new Source("S2",35,SourceType.WAREHOUSE);
+        //s[2]=new Source("S3",25,SourceType.FACTORY);
         d[0]=new Destination("D1",20);
         d[1]=new Destination("D2",25);
         d[2]=new Destination("D3",25);
